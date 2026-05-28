@@ -1,16 +1,15 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Education from "./components/Education";
+import Navbar from "../components/Navbar";
+import Projects from "../components/Projects";
+import LeetCode from "../components/LeetCode";
 
 function Divider() {
   return <div className="hr container" />;
 }
 
-export default function Home() {
+export default function ProjectsPage() {
   return (
     <>
       <Navbar />
@@ -19,11 +18,9 @@ export default function Home() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <Hero />
+        <Projects />
         <Divider />
-        <About />
-        <Divider />
-        <Education />
+        <LeetCode />
       </motion.main>
     </>
   );
